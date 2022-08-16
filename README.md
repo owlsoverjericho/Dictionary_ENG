@@ -5,14 +5,14 @@ Attention! Links to videos on each topic are placed in the appropriate repos.
 
 /// TODO: redo links
 Table of contents:
-- [Essential concepts](https://github.com/HowProgrammingWorks/Dictionary#Essential-concepts)
-- [Basic concepts](https://github.com/HowProgrammingWorks/Dictionary#Основные-понятия)
-- [Additional topics](https://github.com/HowProgrammingWorks/Dictionary#Вспомогательные-материалы)
-- [Data structures](https://github.com/HowProgrammingWorks/Dictionary#Структуры-данных)
-- [Extended concepts](https://github.com/HowProgrammingWorks/Dictionary#Расширенные-понятия)
-- [Parallel programming](https://github.com/HowProgrammingWorks/Dictionary#Параллельное-программирование)
-- [Asynchronous programming](https://github.com/HowProgrammingWorks/Dictionary#Асинхронное-программирование)
-- [Programming paradigms](https://github.com/HowProgrammingWorks/Dictionary#Парадигмы-программирования)
+- [Essential concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Essential-concepts)
+- [Basic concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Основные-понятия)
+- [Additional topics](https://github.com/owlsoverjericho/Dictionary_ENG#Вспомогательные-материалы)
+- [Data structures](https://github.com/owlsoverjericho/Dictionary_ENG#Структуры-данных)
+- [Extended concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Расширенные-понятия)
+- [Parallel programming](https://github.com/owlsoverjericho/Dictionary_ENG#Параллельное-программирование)
+- [Asynchronous programming](https://github.com/owlsoverjericho/Dictionary_ENG#Асинхронное-программирование)
+- [Programming paradigms](https://github.com/owlsoverjericho/Dictionary_ENG#Парадигмы-программирования)
 
 ## Essential concepts
 
@@ -89,20 +89,13 @@ setting an algorithm for calculating a function by calling it itself (directly o
   - Tailed recursion is a special case where the recursive call is the last operation before returning a value, which can always be turned into a loop, even automatically. The non-tail can also be converted into a loop and optimized, but in a more complex way, usually manually.
 - [String](https://github.com/HowProgrammingWorks/String)
   - a sequence of characters (in most languages, each character can be accessed via array access syntax, such as square brackets).
-- [Коллекция / Collection](https://github.com/HowProgrammingWorks/Collections) -
-структура данных, служащая для хранения набора значений и предоставляющая доступ
-к ним по индексам или ключам.
-- Массив / Array - коллекция элементов, доступ к которым осуществляется по
-индексам. Пример: `const cities = ['Tehran', 'Yalta', 'Potsdam'];`
-- Отладка / Debug - процесс обнаружения и устранения ошибок в программном
-обеспечении при помощи вывода сообщений или инструментов: отладчика,
-профилировщика, декомпилятора, систем мониторинга ресурсов и логирования,
-систем непрерывной интеграции и тестирования.
-- ЦП / CPU - центральный процессор / central processing unit - устройство,
-выполняющее машинные инструкции.
-- АЛУ / ALU - блок ЦП, выполняющий арифметические и логические преобразования
-над машинными словами, представляющими целые числа, числа с плавающей точкой,
-адресами памяти, строками, логическими величинами.
+- [Collection](https://github.com/HowProgrammingWorks/Collections) -
+a data structure that stores a set of values and provides access to them by index or key.
+- Array - a collection of elements accessed by indexes. Example:
+`const cities = ['Tehran', 'Yalta', 'Potsdam'];`
+- Debug - the process of detecting and eliminating errors in software using the output of messages or tools: a debugger, a profiler, a decompiler, resource monitoring and logging systems, continuous integration and testing systems.
+- CPU - central processing unit - a device that executes machine instructions.
+- ALU - a CPU block that performs arithmetic and logical transformations on machine words representing integers, floating point numbers, memory addresses, strings, booleans.
 - Component - several program objects (for example: functions, classes, monads, types) united and organized according to a common feature.
 - Module - integral, functionally complete, independent component of a software system having a name, interface, implementation.
 - [Modularity](https://github.com/HowProgrammingWorks/Modularity)

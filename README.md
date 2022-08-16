@@ -415,46 +415,46 @@ a data structure that stores a set of values and provides access to them by inde
 
 ## Extended concepts
 
-- [Сборка мусора / Garbage Collection](https://github.com/HowProgrammingWorks/GarbageCollection)
-- [Прокси / Proxy](https://github.com/HowProgrammingWorks/Proxy)
-- [Символ / Symbol](https://github.com/HowProgrammingWorks/Symbol)
-- [Дифер / Deferred](https://github.com/HowProgrammingWorks/Callbacks)
-- [Промис / Promise](https://github.com/HowProgrammingWorks/Promise)
-- [Необработанные ошибки в промисах на Node.js](https://github.com/HowProgrammingWorks/PromiseError)
-- [Фьючер / Future](https://github.com/HowProgrammingWorks/Callbacks)
-- [Коллекторы данных / Data and Key Collectors](https://github.com/metarhia/metasync/blob/master/lib/collector.js)
-- Неизменяемые данные / Immutable Data
-- Изменяемые данные / Mutable Data
-- Интроспекция / Introspection
-- Рефлексия / Reflection
-- Скаффолдинг / Scaffolding
-- [Инверсия управления / IoC, Inversion of Control](https://github.com/HowProgrammingWorks/InversionOfControl)
-- [Внедрение зависимостей / DI, Dependency Injection](https://github.com/HowProgrammingWorks/DependencyInjection)
-- [Межпроцессовое взаимодействие / IPC, Interprocess Communication](https://github.com/HowProgrammingWorks/InterProcessCommunication)
-- [Песочница / Sandbox](https://github.com/HowProgrammingWorks/Sandboxes)
-- Архитектура / Architecture
-- Слой доступа к данным / Data Access Layer
-- Курсор / Cursor
-- Объектно-реляционное отображение / ORM, Object-relational Mapping
-- [Сервер / Server](https://github.com/HowProgrammingWorks/NodeServer)
-  - [Приклеивание по IP или идентификатору сессии / IP or Session Sticky](https://github.com/HowProgrammingWorks/NodeServer/tree/master/ip-sticky)
-  - Кластеризация / Cluster mode
-    - При помощи [cluster](https://github.com/HowProgrammingWorks/NodeServer/tree/master/native-cluster)
-    - при помощи [child_process](https://github.com/HowProgrammingWorks/NodeServer/tree/master/native-cp)
-  - [Разработка API (клиент и сервер)](https://github.com/HowProgrammingWorks/API)
-- Сервер приложений / Application Server
-- Тонкий клиент и толстый клиент
-- [Проекция данных / Projection](https://github.com/HowProgrammingWorks/Projection)
-- [Измерение производительности / Benchmarking](https://github.com/HowProgrammingWorks/Benchmark)
-- [Интерфейс командной строки / CLI, Command Line Interface and Console](https://github.com/HowProgrammingWorks/CommandLine)
-- [Мониторинг файловой системы / File System Watching](https://github.com/HowProgrammingWorks/FilesystemWatch)
-- [Транзакционные объекты/Transaction](https://github.com/HowProgrammingWorks/Transaction)
-- [Метаданные / Metadata](https://github.com/HowProgrammingWorks/Metaprogramming)
-- [Протокол / Protocol](https://github.com/metarhia/metacom)
-- [Динамическая загрузка модулей / Live Code Reload](https://github.com/HowProgrammingWorks/LiveReload)
+- [Garbage Collection](https://github.com/HowProgrammingWorks/GarbageCollection)
+- [Proxy](https://github.com/HowProgrammingWorks/Proxy)
+- [Symbol](https://github.com/HowProgrammingWorks/Symbol)
+- [Deferred](https://github.com/HowProgrammingWorks/Callbacks)
+- [Promise](https://github.com/HowProgrammingWorks/Promise)
+- [Unhandled promise rejection in Node.js](https://github.com/HowProgrammingWorks/PromiseError)
+- [Future](https://github.com/HowProgrammingWorks/Callbacks)
+- [Data and Key Collectors](https://github.com/metarhia/metasync/blob/master/lib/collector.js)
+- Immutable Data
+- Mutable Data
+- Introspection
+- Reflection
+- Scaffolding
+- [IoC, Inversion of Control](https://github.com/HowProgrammingWorks/InversionOfControl)
+- [DI, Dependency Injection](https://github.com/HowProgrammingWorks/DependencyInjection)
+- [IPC, Interprocess Communication](https://github.com/HowProgrammingWorks/InterProcessCommunication)
+- [Sandbox](https://github.com/HowProgrammingWorks/Sandboxes)
+- Architecture
+- Data Access Layer
+- Cursor
+- ORM, Object-relational Mapping
+- [Server](https://github.com/HowProgrammingWorks/NodeServer)
+  - [IP or Session Sticky](https://github.com/HowProgrammingWorks/NodeServer/tree/master/ip-sticky)
+  - Cluster mode
+    - With [cluster](https://github.com/HowProgrammingWorks/NodeServer/tree/master/native-cluster)
+    - With [child_process](https://github.com/HowProgrammingWorks/NodeServer/tree/master/native-cp)
+  - [API development (client and server)](https://github.com/HowProgrammingWorks/API)
+- Application Server
+- Thin and thick client meaning
+- [Projection](https://github.com/HowProgrammingWorks/Projection)
+- [Benchmarking](https://github.com/HowProgrammingWorks/Benchmark)
+- [CLI, Command Line Interface and Console](https://github.com/HowProgrammingWorks/CommandLine)
+- [File System Watching](https://github.com/HowProgrammingWorks/FilesystemWatch)
+- [Transaction](https://github.com/HowProgrammingWorks/Transaction)
+- [Metadata](https://github.com/HowProgrammingWorks/Metaprogramming)
+- [Protocol](https://github.com/metarhia/metacom)
+- [Live Code Reload](https://github.com/HowProgrammingWorks/LiveReload)
 - Http Request (HTTP, XMLHttpRequest, fetch): [примеры](https://github.com/HowProgrammingWorks/HttpRequest)
-- [Неблокирующие итерации](https://github.com/HowProgrammingWorks/NonBlocking)
-- [Линзы - функциональные аналоги геттера и сеттера](https://github.com/HowProgrammingWorks/Lenses)
+- [Non-blocking iteration](https://github.com/HowProgrammingWorks/NonBlocking)
+- [Lenses, functional analogs of getters & setters](https://github.com/HowProgrammingWorks/Lenses)
 
 ## Asynchronous programming
 

@@ -108,47 +108,47 @@ a data structure that stores a set of values and provides access to them by inde
 
 ## Basic concepts
 
-- [Объект или Экземпляр / Object or Instance](https://github.com/HowProgrammingWorks/DataTypes) -
+- [Object or Instance](https://github.com/HowProgrammingWorks/DataTypes) -
 структура данных, содержащая состояние и методы, связанные с этим состоянием.
 Объект может быть создан как литерал `{}` или экземпляр класса `new ClassName()`
 или как экземпляр прототипа `new PrototypeConstructor()` или возвращен из фабрики.
   - `const person = { name: 'Marcus', city: 'Roma', born: 121 };`
   - `const person = new Person('Marcus', 'Roma', 121);`
-- [Класс / Class](https://github.com/HowProgrammingWorks/Prototype) -
+- [Class](https://github.com/HowProgrammingWorks/Prototype) -
 программная абстракция, объединяющая состояние и поведение (свойства и методы)
 своих экземпляров (инстансов).
   - `class Point { constructor(x, y) { this.x = x; this.y = y; } }`
   - `class Rect { move(x, y) { this.x += x; this.y += y; } }`
   - `class Square extends Rect { constructor(x, y, m) { super(x, y, m, m); } }`
   - `class Point { static from(point) { return new Point(this.x, this.y); } }`
-- [Прототип / Prototype](https://github.com/HowProgrammingWorks/Prototype) -
+- [Prototype](https://github.com/HowProgrammingWorks/Prototype) -
 специальный объект, на который ссылаются его экземпляры и наследники. Свойства
 прототипа становятся видны у наследников, если эти свойства не переопределены у
 наследников. Формируется цепочка прототипов, по которой происходит
 последовательный поиск свойств, пока они не будут найдены или пока не будет
 достигнут конец цепочки наследования. Иногда под прототипом понимается шаблон,
 который клонируется во время инстанциирования (не для JavaScript).
-- Инстанцирование / Instantiation - создание объекта (экземпляра) или выделение
+- Instantiation - создание объекта (экземпляра) или выделение
 памяти для структуры данных.
   - `const rect = new Rectangle(-50, -50, 100, 150);`
   - `const rect = { a: { x: -50, y: -50 }, b: { x: 100, y: 150 } };`
   - `const cities = new Array(1000);`
   - `const cities = ['Tehran', 'Kiev', 'Yalta', 'Beijing', 'Potsdam', 'London'];`
-- Область видимости / Scope - часть кода, из которой "виден" идентификатор.
-- Лексический контекст / Lexical environment - набор идентификаторов, связанных
+- Scope - часть кода, из которой "виден" идентификатор.
+- Lexical environment - набор идентификаторов, связанных
 с определенными значениями в рамках функции или блока кода (в том числе блоков
 циклов, условий и т.д.).
 - Объектный контекст функции - объект, связанный со служебным идентификатором
 `this`. Все функции, кроме стрелочных, могут быть связаны с объектным контекстом.
 Объект связан с `this` если функция является методом этого объекта, если функция
 привязана к нему через `bind` или вызвана через `apply` и `call`.
-- Глобальный контекст / Global context - глобальный объект-справочник. Если
+- Global context - глобальный объект-справочник. Если
 идентификатор не находится ни в одном из вложенных лексических контекстов, то
 будет выполнен его поиск в глобальном контексте (global, window, sandbox).
-- Объявление функции / Function definition - способ объявления функции, который
+- Function definition - способ объявления функции, который
 виден из любого места в лексическом контексте, в котором объявлена функция,
 пример: `function sum(a, b) { return a + b; }`
-- Функциональное выражение / Function expression - связывание функции с
+- Function expression - связывание функции с
 идентификатором при помощи присвоения, при котором значение будет доступно через
 идентификатор не во всем лексическом контексте, а только после места присвоения.
 Имеет несколько синтаксических вариантов:
@@ -160,13 +160,13 @@ a data structure that stores a set of values and provides access to them by inde
     - `const max = (a, b) => { return a + b; };`
   - лямбда-выражение, Функция-стрелка / Lambda expression, Arrow function
     - `const max = (a, b) => (a + b);`
-- [Чистая функция / Pure Function](https://github.com/HowProgrammingWorks/Function)
+- [Pure Function](https://github.com/HowProgrammingWorks/Function)
   - функция, вычисляющая результат только на основе аргументов, не имеющая
   состояния и не обращающаяся к операциям ввода-вывода
   - функция, результат которой всегда детерминированный, т.е. для любого
   аргумента всегда будет один и тот же результат
   - функция, не имеющая побочных эффектов (см. побочный эффект)
-- [Замыкание / Closure](https://github.com/HowProgrammingWorks/Closure)
+- [Closure](https://github.com/HowProgrammingWorks/Closure)
   - если вернуть функцию `g` из функции `f`, то `g` будет видеть контекст
   функции `f`, так же, как и свои аргументы;
   - если `f` возвращает `g`, то говорят, что экземпляр `g` замкнул контекст `f`;
@@ -178,43 +178,43 @@ a data structure that stores a set of values and provides access to them by inde
   - при помощи замыкания можно реализовать функциональное наследование;
   - `const add = a => b => a + b;`
   - `const hash = (data = {}) => (key, value) => (data[key] = value, data);`
-- [Суперпозиция / Superposition](https://github.com/HowProgrammingWorks/Composition)
+- [Superposition](https://github.com/HowProgrammingWorks/Composition)
   - объединение вызова функций в выражения таким образом, что результат одних
   функций становится аргументами других функций;
   - `const expr2 = add(pow(mul(5, 8), 2), div(inc(sqrt(20)), log(2, 7)));`
-- [Композиция / Composition](https://github.com/HowProgrammingWorks/Composition)
-- Инструкция / Instruction - один шаг алгоритма вычислений, например инструкция процессора исполняется CPU.
-- Оператор / Statement - наименьшая синтаксическая часть языка программирования, исполняемая интерпретатором, средой или компилируемая в машинный код.
-- Команда / Command - атомарная задача для командного процессора.
-- Выражение / Expression - синтаксическая конструкция языка программирования предназначенная для выполнения вычислений. Выражение состоит из идентификаторов, значений, операторов и вызова функций. Пример: `(len - 1) * f(x, INTERVAL)`
-- Блок кода / Block - логически связанная группа инструкций или операторов. Блоки создают область видимости. Блоки могут быть вложенными. Примеры: `{}`, `(+ a b)`, `begin end`, отступы в Python.
-- Процедура или подпрограмма / Procedure or Subroutine - логически связанная группа инструкций или операторов, имеющая имя. Процедура способствует повторному использованию кода и может быть вызвана из разных частей программы, много раз и с разными аргументами. Процедура не возвращает значений, в отличие от функций, но в некоторых языках (но не в JavaScript) может модифицировать свои аргументы. Во многих языках процедура описывается при помощи синтаксиса функций (например, типа void).
-- Функция / Function - абстракция преобразования значений. Функция однозначно отображает одно множество значений в другое множество значений. Функция может быть задана блоком операторов или выражением. Функция имеет набор аргументов. Функция может быть вызвана по имени или через указатель. Функция способствует повторному использованию кода и может быть вызвана из разных частей программы, много раз и с разными аргументами. В JavaScript функция описывается при помощи function или синтаксиса стрелок (лямбда-функций).
+- [Composition](https://github.com/HowProgrammingWorks/Composition)
+- Instruction - один шаг алгоритма вычислений, например инструкция процессора исполняется CPU.
+- Statement - наименьшая синтаксическая часть языка программирования, исполняемая интерпретатором, средой или компилируемая в машинный код.
+- Command - атомарная задача для командного процессора.
+- Expression - синтаксическая конструкция языка программирования предназначенная для выполнения вычислений. Выражение состоит из идентификаторов, значений, операторов и вызова функций. Пример: `(len - 1) * f(x, INTERVAL)`
+- Code block - логически связанная группа инструкций или операторов. Блоки создают область видимости. Блоки могут быть вложенными. Примеры: `{}`, `(+ a b)`, `begin end`, отступы в Python.
+- Procedure or Subroutine - логически связанная группа инструкций или операторов, имеющая имя. Процедура способствует повторному использованию кода и может быть вызвана из разных частей программы, много раз и с разными аргументами. Процедура не возвращает значений, в отличие от функций, но в некоторых языках (но не в JavaScript) может модифицировать свои аргументы. Во многих языках процедура описывается при помощи синтаксиса функций (например, типа void).
+- Function - абстракция преобразования значений. Функция однозначно отображает одно множество значений в другое множество значений. Функция может быть задана блоком операторов или выражением. Функция имеет набор аргументов. Функция может быть вызвана по имени или через указатель. Функция способствует повторному использованию кода и может быть вызвана из разных частей программы, много раз и с разными аргументами. В JavaScript функция описывается при помощи function или синтаксиса стрелок (лямбда-функций).
 Сигнатура функции / Function signature - имя (идентификатор), количество аргументов и их типы (а иногда и имена аргументов), тип результата.
-- Метод / Method
+- Method
 функция или процедура, связанная с объектным контекстом или программным интерфейсом;
 `{ a: 10, b: 10, sum() { return this.a + this.b; } }`
-- Цикл / Loop - многократное исполнение блока операторов
-- Условие / Conditional statements - синтаксическая конструкция, позволяющая выполнить разные действия или возвращающая разные значения (тернарный оператор) в зависимости от логического выражения (возвращающего true или false)
-- Рекурсия / Recursion - задание алгоритма вычисления функции через вызов ее самой (прямой или непрямой) или определение функции, через нее саму.
+- Loop - многократное исполнение блока операторов
+- Conditional statements - синтаксическая конструкция, позволяющая выполнить разные действия или возвращающая разные значения (тернарный оператор) в зависимости от логического выражения (возвращающего true или false)
+- Recursion - задание алгоритма вычисления функции через вызов ее самой (прямой или непрямой) или определение функции, через нее саму.
 - Косвенная (непрямая) рекурсия - когда функция определена или вызывает себя не напрямую, а через другую или цепочку функций;
 - Хвостовая - частный случай, когда рекурсивный вызов является последней операцией перед возвратом значения, что всегда может быть преобразовано в цикл, даже автоматическим способом. Не хвостовая тоже может быть преобразована в цикл и оптимизирована, но более сложным способом, обычно вручную.
-- Строка / String - последовательность символов (в большинстве языков к каждому символу можно обратиться через синтаксис доступа к элементам массива, например, квадратные скобки).
-- Коллекция / Collection - структура данных, служащая для хранения набора значений и предоставляющая доступ к ним по индексам или ключам.
-- Массив / Array - коллекция элементов, доступ к которым осуществляется по индексам. Пример: const cities = ['Tehran', 'Yalta', 'Potsdam'];
-- Отладка / Debug - процесс обнаружения и устранения ошибок в программном обеспечении при помощи вывода сообщений или инструментов: отладчика, профилировщика, декомпилятора, систем мониторинга ресурсов и логирования, систем непрерывной интеграции и тестирования.
-- ЦП / CPU - центральный процессор / central processing unit - устройство, выполняющее машинные инструкции.
-- АЛУ / ALU - блок ЦП, выполняющий арифметические и логические преобразования над машинными словами, представляющими целые числа, числа с плавающей точкой, адресами памяти, строками, логическими величинами.
-- Компонент / Component - несколько программных объектов (например: функций, классов, монад, типов) объединенных и организованных по общему признаку.
-- Модуль / Module - целостный, функционально полный, независимый компонент программной системы имеющий имя, интерфейс, реализацию.)
+- String - последовательность символов (в большинстве языков к каждому символу можно обратиться через синтаксис доступа к элементам массива, например, квадратные скобки).
+- Collection - структура данных, служащая для хранения набора значений и предоставляющая доступ к ним по индексам или ключам.
+- Array - коллекция элементов, доступ к которым осуществляется по индексам. Пример: const cities = ['Tehran', 'Yalta', 'Potsdam'];
+- Debug - процесс обнаружения и устранения ошибок в программном обеспечении при помощи вывода сообщений или инструментов: отладчика, профилировщика, декомпилятора, систем мониторинга ресурсов и логирования, систем непрерывной интеграции и тестирования.
+- CPU - центральный процессор / central processing unit - устройство, выполняющее машинные инструкции.
+- ALU - блок ЦП, выполняющий арифметические и логические преобразования над машинными словами, представляющими целые числа, числа с плавающей точкой, адресами памяти, строками, логическими величинами.
+- Component - несколько программных объектов (например: функций, классов, монад, типов) объединенных и организованных по общему признаку.
+- Module - целостный, функционально полный, независимый компонент программной системы имеющий имя, интерфейс, реализацию.)
   - `const compose = (f1, f2) => x => f2(f1(x));`
   - `const compose = (...funcs) => (...args) => (funcs.reduce((args, fn) => [fn(...args)], args));`
-- [Частичное применение / Partial application](https://github.com/HowProgrammingWorks/PartialApplication)
+- [Partial application](https://github.com/HowProgrammingWorks/PartialApplication)
   - `const partial = (fn, x) => (...args) => fn(x, ...args);`
-- [Каррирование / Currying](https://github.com/HowProgrammingWorks/PartialApplication)
+- [Currying](https://github.com/HowProgrammingWorks/PartialApplication)
   - `const result = curry((a, b, c) => (a + b + c))(1, 2)(3);`
-- [Побочные эффекты / Side effects](https://github.com/HowProgrammingWorks/Function)
-- [Функция высшего порядка / Higher-order Function](https://github.com/HowProgrammingWorks/HigherOrderFunction)
+- [Side effects](https://github.com/HowProgrammingWorks/Function)
+- [Higher-order Function](https://github.com/HowProgrammingWorks/HigherOrderFunction)
   - если функция только в аргументах, то это колбек;
   - если функция только в результате, то это фабрика функций на замыканиях;
   - если возвращаемая функция имеет тот же смысл, что и получаемая в
@@ -226,55 +226,55 @@ a data structure that stores a set of values and provides access to them by inde
   прототипов соответственно;
 - Функциональное наследование / Functional Inheritance - при помощи замыканий,
 частичного применения, каррирования, вложенных лямбд.
-- [Обертка / Wrapper](https://github.com/HowProgrammingWorks/Wrapper)
+- [Wrapper](https://github.com/HowProgrammingWorks/Wrapper)
   - функция, которая оборачивает другую функцию (иногда объект, интерфейс или
   функциональный объект), добавляя ему дополнительное поведение;
   - можно обернуть целый API интерфейс и даже асинхронную функцию вместе с
   колбеками (если известен контракт);
-- [Дженерики / Generics](https://github.com/HowProgrammingWorks/Generics)
+- [Generics](https://github.com/HowProgrammingWorks/Generics)
   - Обобщенное программирование - парадигма, позволяющая обобщенно описать
   алгоритмы и структуры данных, абстрагируясь от конкретных типов.
-- Интерфейс / Interface
+- Interface
   - набор методов (функций) объединенных или общим объектным контекстом или
   применением к структурам данных одной предметной области т.е. смыслом (API);
   - способ определения (спецификации) контракта, по которому связаны
   программные компоненты;
   - Набор методов с их именами, аргументами и типами аргументов
-- Программный интерфейс / Application Interface, API
+- Application Interface, API
   - интерфейс программных компонентов: модулей, слоев абстракции, приложений;
-- [Синглтон / Singleton](https://github.com/HowProgrammingWorks/Singleton)
+- [Singleton](https://github.com/HowProgrammingWorks/Singleton)
   - шаблон проектирования, предполагающий, что в одном пространстве имен
   (процессе, приложении, базе данных) будет только один экземпляр класса
   (или просто один подобный объект) к которому можно обратиться по определенному
   (известному) имени;
-- [Функция обратного вызова, колбек / Callback](https://github.com/HowProgrammingWorks/Callbacks)
+- [Callback](https://github.com/HowProgrammingWorks/Callbacks)
   - функция передаваемая в качестве аргумента в другую функцию (или метод)
   для того, чтобы быть вызванной для возврата значения, ошибки или уведомления;
   - функции обратного вызова имеют подтипы:
     - один раз вызываемые (чаще всего);
     - [Событие / Event](https://github.com/HowProgrammingWorks/Callbacks)
     - [Лисенер / Listener](https://github.com/HowProgrammingWorks/Callbacks)
-- [Итерирование / Iteration](https://github.com/HowProgrammingWorks/Iteration) -
+- [Iteration](https://github.com/HowProgrammingWorks/Iteration) -
 многократное повторение одного блока кода или одной функции над различными
 данными: элементами массивов, множеств, списков, коллекций и различными
 значениями переменной цикла.
-- [Итератор / Iterator](https://github.com/HowProgrammingWorks/Iteration) -
+- [Iterator](https://github.com/HowProgrammingWorks/Iteration) -
 интерфейс доступа к элементам коллекции: массива, множества, списка;
-- [Файл / File](https://github.com/HowProgrammingWorks/Files)
-- [Поток, Файловый поток / Stream, File Stream](https://github.com/HowProgrammingWorks/Streams)
-- [Сокет / Socket](https://github.com/HowProgrammingWorks/Socket) -
+- [File](https://github.com/HowProgrammingWorks/Files)
+- [Stream, File Stream](https://github.com/HowProgrammingWorks/Streams)
+- [Socket](https://github.com/HowProgrammingWorks/Socket) -
 программный интерфейс (или абстракция) для обмена данными между процессами.
-- [Дескриптор / Handle](https://github.com/HowProgrammingWorks/Files) -
+- [Handle](https://github.com/HowProgrammingWorks/Files) -
 уникальный идентификатор программного объекта (чаще всего объекта операционной
 системы): файла, сокета, окна, таймера, соединения и т.д.
-- Состояние / State - совокупность данных программного компонента (переменных
+- State - совокупность данных программного компонента (переменных
 и структур данных), определяющие его поведение и реакцию на операции с ним.
-- Кэш / Cache - место временного хранения данных (буфер, коллекция, область
+- Cache - место временного хранения данных (буфер, коллекция, область
 памяти) для быстрого доступа и оптимизации. Возможно кэширование операций
 чтения, вычислений, операций записи (когда запись не может быть произведена
 достаточно быстро) или упреждающее чтение в буфер (когда можно определить,
 какие данные будут запрошены с наибольшей вероятностью).
-- Хэширование / Hashing - преобразование данных произвольной длины (буфера,
+- Hashing - преобразование данных произвольной длины (буфера,
 массива, объекта или структуры данных) в последовательность битов определенной
 длины (хеш) при помощи хеш-функции (при изменении хоть 1 бита в данных хеш
 меняется существенно).
@@ -282,27 +282,27 @@ a data structure that stores a set of values and provides access to them by inde
 объект функционального типа, который является функцией и объектом одновременно.
 Другими словами, функциональный объект может быть вызван, как функция и может
 иметь свойства и методы, как объект.
-- [Функтор / Functor](https://github.com/HowProgrammingWorks/Functor) - это
+- [Functor](https://github.com/HowProgrammingWorks/Functor) - это
 функциональный объект, который является еще и рекурсивным замыканием. Функтор
 хранит в замыкании защищенное значение и позволяющий отобразить это значение
 в другой функтор через вызов функции (обычно `map`).
 - [Аппликативный функтор](https://github.com/HowProgrammingWorks/Functor) -
 функтор, который имеет метод `apply`.
-- Монада / Monad - аппликативный функтор, который имеет метод `chain`.
-- [Мемоизация / Memoization](https://github.com/HowProgrammingWorks/Memoization) -
+- Monad - аппликативный функтор, который имеет метод `chain`.
+- [Memoization](https://github.com/HowProgrammingWorks/Memoization) -
 обертка, сохраняющая результаты выполнения функции для предотвращения повторных
 вычислений.
-- [Примесь / Mixin](https://github.com/HowProgrammingWorks/Mixin) - добавление
+- [Mixin](https://github.com/HowProgrammingWorks/Mixin) - добавление
 свойств, методов или поведения к объекту после его инстанциирования. Пример:
 `Object.assign(target, { field1, field2 }, { field3 });`
-- Декоратор / Decorator - шаблон оборачивания объектов или функций для добавления
+- Decorator - шаблон оборачивания объектов или функций для добавления
 новой функциональности без наследования при помощи специального синтаксиса.
-- [Наследование / Inheritance](https://github.com/HowProgrammingWorks/Inheritance)
-- [Множественное наследование / Multiple Inheritance](https://github.com/HowProgrammingWorks/Inheritance)
-- [Непрямое наследование / Indirect Inheritance](https://github.com/HowProgrammingWorks/Inheritance)
-- [Генератор / Generator](https://github.com/HowProgrammingWorks/Generator)
-- [Итератор / Iterable and Iterator](https://github.com/HowProgrammingWorks/Iterator)
-- [Ввод/вывод / I/O, Input-output](https://github.com/HowProgrammingWorks/AsynchronousProgramming)
+- [Inheritance](https://github.com/HowProgrammingWorks/Inheritance)
+- [Multiple Inheritance](https://github.com/HowProgrammingWorks/Inheritance)
+- [Indirect Inheritance](https://github.com/HowProgrammingWorks/Inheritance)
+- [Generator](https://github.com/HowProgrammingWorks/Generator)
+- [Iterable and Iterator](https://github.com/HowProgrammingWorks/Iterator)
+- [I/O, Input-output](https://github.com/HowProgrammingWorks/AsynchronousProgramming)
   - операции, выходящие за рамки CPU и RAM (арифметико-логического устройства
   и памяти), т.е. операции с устройствами ввода вывода: сеть, диск, порты,
   консоль (клавиатура и экран), другие периферийные устройства (взаимодействие
@@ -310,54 +310,54 @@ a data structure that stores a set of values and provides access to them by inde
 - [EventEmitter](https://github.com/HowProgrammingWorks/EventEmitter)
   - универсальная абстракция для работы с событиями через подписку (subscription:
   addListener, on, once) и отправку (emit)
-- [Чеининг / Chaining](https://github.com/HowProgrammingWorks/Chaining)
+- [Chaining](https://github.com/HowProgrammingWorks/Chaining)
   - цепочный синтаксис вызова функций `total(april)(may)(july)` или методов
   `array.filter(f1).reduce(f2)`
-- [Сериализация / Serialization](https://github.com/HowProgrammingWorks/Serialization) -
+- [Serialization](https://github.com/HowProgrammingWorks/Serialization) -
 преобразование структуры данных (развернутой в памяти) в битовую
 последовательность, обычно в последовательность байтов (бинарная сериализация)
 или в строку (текстовая сериализация).
-- [Десериализация / Deserialization](https://github.com/HowProgrammingWorks/Serialization) -
+- [Deserialization](https://github.com/HowProgrammingWorks/Serialization) -
 операция, обратная сериализации, т.е. восстановление структуры данных из
 последовательности битов (чаще байтов или строки).
-- Парсинг / Parsing - синтаксический анализ текста, результатом чего может являться:
+- Parsing - синтаксический анализ текста, результатом чего может являться:
   - для формальной грамматики - AST-дерево;
   - для слабоструктурированного документа - структура данных, имеющая
   четкую структуру, в которую частично перенесены данные из слабой структуры;
   - для других естественных или искусственных языков - информационные модели,
   им соответствующие;
-- [Регулярные выражения / Regular Expressions](https://github.com/HowProgrammingWorks/RegExp) -
+- [Regular Expressions](https://github.com/HowProgrammingWorks/RegExp) -
 синтаксическая конструкция, паттерн, формальный язык, определяющий порядок
 парсинга другой синтаксической конструкции.
-- [Зависимость / Dependency](https://github.com/HowProgrammingWorks/Project) -
+- [Dependency](https://github.com/HowProgrammingWorks/Project) -
 связанность программных компонентов, при которой один компонент (зависимый)
 "знает" другой; это значит, что в нем помещен вызов метода (реализация которого
 содержится в другом) или он слушает событие, которое генерирует другой или он
 "знает" структуры данных, которые могут быть переданы из другого компонента.
-- Декомпозиция / Decomposition - разделение программного компонента на части по
+- Decomposition - разделение программного компонента на части по
 принципу функциональности, при этом, каждая часть будет решать подзадачу и
 появится часть кода, которая определяет порядок связи всех частей (композицию).
-- [Ленивость / Lazy](https://github.com/HowProgrammingWorks/Lazy)
-- [Обработка ошибок / Error handling](https://github.com/HowProgrammingWorks/Errors)
-- [Фабрика / Factory](https://github.com/HowProgrammingWorks/Factory) - функция
+- [Lazy](https://github.com/HowProgrammingWorks/Lazy)
+- [Error handling](https://github.com/HowProgrammingWorks/Errors)
+- [Factory](https://github.com/HowProgrammingWorks/Factory) - функция
 или метод для инстациирования объектов, функций, структур данных и любых других
 программных абстракций, например, экземпляров класса в обход конструктора или
 функциональных объектов.
-- Объектный Пул / [Object Pool](https://github.com/HowProgrammingWorks/Pool) -
+- [Object Pool](https://github.com/HowProgrammingWorks/Pool) -
 Множество заранее инстанциированных объектов (или массивов, сокетов, буферов,
 структур данных и других программных абстракций) из которого мы можем их брать
 инициализированные экземпляры (вместо инстанциирования новых) и отдавать их
 после использования.
-- [Таймеры / Timers](https://github.com/HowProgrammingWorks/Timers)
-- [Адаптер / Adapter](https://github.com/HowProgrammingWorks/Adapter) -
+- [Timers](https://github.com/HowProgrammingWorks/Timers)
+- [Adapter](https://github.com/HowProgrammingWorks/Adapter) -
 Паттерн достижения совместимости, позволяющий обернуть класс, функцию или
 другой программный компонент с несовместимым контрактом в программный
 компонент с контрактом, который нам нужен.
-- [Стратегия (Strategy)](https://github.com/HowProgrammingWorks/Strategy) -
+- [(Strategy)](https://github.com/HowProgrammingWorks/Strategy) -
 Паттерн реализует выбор одного из совместимых и взаимозаменяемых классов,
 которые содержат поведение (алгоритм), аналогичный по функциональности и
 реализующий общий интерфейс. Актуален и для функционального программирования.
-- [Фасад / Facade](https://github.com/HowProgrammingWorks/Facade) - Паттерн
+- [Facade](https://github.com/HowProgrammingWorks/Facade) - Паттерн
 для скрытия сложности. Фасад скрывает несколько инстансов разных классов в
 своих свойствах (иногда приватных, но для JS этого пока нет) и предоставляет
 общий (фасадный) интерфейс для управления ими. Для функционального
@@ -368,50 +368,50 @@ a data structure that stores a set of values and provides access to them by inde
 
 ## Additional-topics
 
-- [Линтер / Linter](https://github.com/HowProgrammingWorks/Tools) - статический
+- [Linter](https://github.com/HowProgrammingWorks/Tools) - статический
 анализатор кода (без запуска), который может определить и предложить
 стилистические, грамматические или оптимизационное улучшение или просто выявить
 проблему (а иногда и исправить ее автоматически).
-- Система контроля версий
-- Менеджер пакетов
-- Непрерывная интеграция
-- Тестирование
+- Version control system
+- Package manager
+- Continuous integration
+- Testing
 
 ## Data structures
 
-- [Запись или структура / Struct or Record](https://github.com/HowProgrammingWorks/DataStructures)
-- [Массив / Array](https://github.com/HowProgrammingWorks/DataStructures)
-- [Буфер / Buffer](https://github.com/HowProgrammingWorks/Buffers)
-- [Список / List](https://github.com/HowProgrammingWorks/LinkedList)
+- [Struct or Record](https://github.com/HowProgrammingWorks/DataStructures)
+- [Array](https://github.com/HowProgrammingWorks/DataStructures)
+- [Buffer](https://github.com/HowProgrammingWorks/Buffers)
+- [List](https://github.com/HowProgrammingWorks/LinkedList)
   - Односвязный, двусвязный, кольцевой, развернутый список (список массивов)
   - Реализация на объектах, массивах и замыканиях
   - Реализация на синтаксисе прототипов, классов и фабрик
   - Реализация на замыканиях и функциональных объектах
   - Реализация на одной и двух категориях (только узел или список и узел)
-- [Стек, очередь, дек](https://github.com/HowProgrammingWorks/Dequeue)
-  - Стек / Stack - список, работающий по принципу LIFO;
-  - Очередь / Queue - список, работающий по принципу FIFO;
-  - Дек / Dequeue - двухсторонний список, работающий, как стек и очередь;
+- [Stack, Queue, Dequeue](https://github.com/HowProgrammingWorks/Dequeue)
+  - Stack - список, работающий по принципу LIFO;
+  - Queue - список, работающий по принципу FIFO;
+  - Dequeue - двухсторонний список, работающий, как стек и очередь;
 - [Дерево](https://github.com/HowProgrammingWorks/Trees)
 - [Двоичное дерево](https://github.com/HowProgrammingWorks/Trees), поисковое
 дерево, красно-черное дерево.
-- Куча / Heap - древовидная структура данных или область памяти для динамического
+- Heap - древовидная структура данных или область памяти для динамического
 распределения под хранение данных.
-- [Граф / Graph](https://github.com/HowProgrammingWorks/Graph)
-- [Буфер / Buffer](https://github.com/HowProgrammingWorks/Buffers) -
+- [Graph](https://github.com/HowProgrammingWorks/Graph)
+- [Buffer](https://github.com/HowProgrammingWorks/Buffers) -
 область памяти для хранения данных (обычно для операций ввода/вывода).
 - Типизированные массивы
-- [Коллекция / Collection](https://github.com/HowProgrammingWorks/Collections) -
+- [Collection](https://github.com/HowProgrammingWorks/Collections) -
 структура данных, служащая для хранения набора значений и предоставляющая
 доступ к ним по индексам или ключам.
-- [Множество / Set](https://github.com/HowProgrammingWorks/Set)
+- [Set](https://github.com/HowProgrammingWorks/Set)
   - структура данных, реализующая математическое "множество";
   - структура данных, служащая для хранения однородного набора значений, которые
   не имеют индексов или ключей (но внутри структуры данных они должны иметь
   порядок, например, индекс в массиве, однако, множество абстрагирует нас от
   этой особенности реализации).
-- [Ключ-значение, Хешмап / Map, Key-value](https://github.com/HowProgrammingWorks/KeyValue)
-  - [класс `Map`](https://github.com/HowProgrammingWorks/Map)
+- [Map, Key-value](https://github.com/HowProgrammingWorks/KeyValue)
+  - [`Map` class](https://github.com/HowProgrammingWorks/Map)
 
 ## Extended concepts
 

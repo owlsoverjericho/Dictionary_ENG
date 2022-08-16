@@ -1,7 +1,7 @@
 # Dictionary-index of concepts with links
 
 Attention! Links to videos on each topic are placed in the appropriate repos.
-(vids are in rus btw)
+(vids are in 🇷🇺 btw)
 
 Table of contents:
 - [Essential concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Essential-concepts)

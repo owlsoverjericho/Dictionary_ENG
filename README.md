@@ -1,151 +1,94 @@
-# Словарь-индекс понятий со ссылками
+# Dictionary-index of concepts with links
 
-Внимание! Ссылки на видео по каждой теме помещены в соответствующие репозитории.
+Attention! Links to videos on each topic are placed in the appropriate repos.
+(vids are in rus btw)
 
-Оглавление:
-- [Базовые понятия](https://github.com/HowProgrammingWorks/Dictionary#Базовые-понятия)
-- [Основные понятия](https://github.com/HowProgrammingWorks/Dictionary#Основные-понятия)
-- [Вспомогательные материалы](https://github.com/HowProgrammingWorks/Dictionary#Вспомогательные-материалы)
-- [Структуры данных](https://github.com/HowProgrammingWorks/Dictionary#Структуры-данных)
-- [Расширенные понятия](https://github.com/HowProgrammingWorks/Dictionary#Расширенные-понятия)
-- [Параллельное программирование](https://github.com/HowProgrammingWorks/Dictionary#Параллельное-программирование)
-- [Асинхронное программирование](https://github.com/HowProgrammingWorks/Dictionary#Асинхронное-программирование)
-- [Парадигмы программирования](https://github.com/HowProgrammingWorks/Dictionary#Парадигмы-программирования)
+/// TODO: redo links
+Table of contents:
+- [Essential concepts](https://github.com/HowProgrammingWorks/Dictionary#Essential-concepts)
+- [Basic concepts](https://github.com/HowProgrammingWorks/Dictionary#Основные-понятия)
+- [Additional topics](https://github.com/HowProgrammingWorks/Dictionary#Вспомогательные-материалы)
+- [Data structures](https://github.com/HowProgrammingWorks/Dictionary#Структуры-данных)
+- [Extended concepts](https://github.com/HowProgrammingWorks/Dictionary#Расширенные-понятия)
+- [Parallel programming](https://github.com/HowProgrammingWorks/Dictionary#Параллельное-программирование)
+- [Asynchronous programming](https://github.com/HowProgrammingWorks/Dictionary#Асинхронное-программирование)
+- [Programming paradigms](https://github.com/HowProgrammingWorks/Dictionary#Парадигмы-программирования)
 
-## Базовые понятия
+## Essential concepts
 
-- [Абстракция / Abstraction](https://github.com/HowProgrammingWorks/Reusable)
-это обобщение, отвлеченное от конкретики с выделением существенных и отсечением
-несущественных свойств и связей. Абстрагирование - построение абстракций или
-моделей, повышает повторное использование алгоритмов и структур данных.
-  - Абстракция - обобщенное решение задачи (в отличие от конкретного решения),
-  подходящее для широкого круга задач;
-  - Абстракция - модель реального объекта (множества объектов), обобщение
-  множества, приближение к реальности, достаточное для решения задачи;
-  - Абстракция - множество свойств и связей объекта, относящееся к определенному
-  его аспекту, необходимому для решения задачи;
-  - [Слои абстракций / Abstraction Layer](https://github.com/HowProgrammingWorks/AbstractionLayers)
-- Парадигма программирования / Programming Paradigm
-  - Парадигма задает набор идей и понятий, допущений и ограничений, концепций,
-  принципов, постулатов, приемов и техники программирования для решения задач
-  на ЭВМ;
-  - Парадигма предлагает модель решения задач, определенный стиль, шаблоны
-  (примеры хороших и плохих решений) применяемых для написания программного кода;
-- Синтаксис / Syntax - правила построения программного кода из символов, но не
-затрагивающие смысловую (семантическую) нагрузку кода. Синтаксис определяет
-только формальную структуру кода.
-- Значение / Value - величина, записанная в определенное место памяти в
-определенном формате и представляющая данные, которым может манипулировать
-программа.
-- Тип / Type - множество значений и операции, которые могут быть произведены над
-этими значениями. Например, в JavaScript тип `Boolean` предполагает два значения
-`true` и `false` и логические операции над ними, тип  `Null` предполагает одно
-значение `null`, а тип `Number` множество рациональных чисел с дополнительными
-ограничениями на минимальное и максимальное значение, а так же ограничения на
-точность и математические операции `+ - * ** / % ++ -- > < >= <= & | ~ ^ << >>`.
-  - [Типы данных / Data Types](https://github.com/HowProgrammingWorks/DataTypes)
-  - `[5, 'Kiev', true, { city: 'Beijing' }, a => ++a ].map(x => typeof x);`
-- Литерал / Literal - запись значения в коде программы. Например: литералы чисел,
-логических значений, null и undefined, строк, массивов, объектов, функций.
-Литералы могут иметь различный синтаксис, от очень простого, для записи чисел,
-до сложных синтаксических конструкций, для записи объектов.
-- Скаляр / Scalar / Primitive / Atomic value - значение примитивного типа данных.
-Скаляр копируется при присвоении и передается в функцию по значению.
-- Ссылка / Reference указывает на значение ссылочного типа, т.е. не скалярное
-значение, для JavaScript это подтипы `Object, Function, Array`.
-  - [ссылочные типы](https://github.com/HowProgrammingWorks/DataTypes)
-  - [примеры кода по массивам и объектам](https://github.com/HowProgrammingWorks/DataStructures)
-- Идентификатор / Identifier - имена переменных, констант, функций, методов,
-аргументов, классов, как внутренние, так и импортированные из других модулей и
-глобальные.
-- [Переменная / Variable](https://github.com/HowProgrammingWorks/DataTypes) -
-именованная область памяти (идентификатор), имеющая тип данных, адрес и
-значение. Мы можем менять значение переменной в отличие от константы (а для
-некоторых языков и тип): `let cityName = 'Beijing';`
-- Присвоение / Assignment - связывания значения и идентификатора (например
-переменной). Операция присвоения во многих языках возвращает присваиваемое
-значение (имеет поведение выражения).
-- [Константа / Constant](https://github.com/HowProgrammingWorks/DataTypes) -
-идентификатор, с которым связано неизменяемое значение и тип:
+- [Abstraction](https://github.com/HowProgrammingWorks/Reusable)
+this is a generalization, abstracted from specifics with the allocation of essential and cutting off non-essential properties and relationships. Abstraction - building abstractions or models, increases the reuse of algorithms and data structures.
+  - Abstraction - generalized solution of the problem (as opposed to a specific solution),
+  suitable for a wide range of tasks;
+  - Abstraction - model of a real object (a set of objects), generalization
+  of the set, approximation to reality, sufficient to solve the problem;
+  - Abstraction - set of properties and relationships of an object related to a certain
+  aspect of it necessary to solve the problem;
+  - [Abstraction Layer](https://github.com/HowProgrammingWorks/AbstractionLayers)
+- Programming Paradigm
+  - The paradigm specifies a set of ideas and concepts, assumptions and restrictions, principles, postulates and programming techniques for solving problems on a computer;
+  - The paradigm offers a problem solving model, a certain style, patterns
+  (examples of good and bad decisions) used to write program code;
+- Syntax - rules for constructing program code from symbols, but not
+affecting the semantic (i.e. meaning) load of the code. The syntax defines
+only the formal structure of the code.
+- Value - written to a specific memory location in
+in a certain format and representing data that can be manipulated by the program.
+- Type - a set of values and operations that can be performed on these values. For example, in JavaScript, the `Boolean` type assumes two values `true` and `false` and logical operations on them, the `Null` type assumes one `null` value, and the `Number` type is a set of rational numbers with additional restrictions on the minimum and maximum value, as well as restrictions on precision and mathematical operations `+ - * ** / % ++ -- > < >= <= & | ~ ^ << >>`.
+  - [Data Types](https://github.com/HowProgrammingWorks/DataTypes)
+  - `[5, 'Kyiv', true, { city: 'Beijing' }, a => ++a ].map(x => typeof x);`
+- Literal - a written value in the program code. For example: literals of numbers, booleans, null and undefined, strings, arrays, objects, functions.
+Literals can have a variety of syntaxes, from very simple syntax for writing numbers to complex syntactic constructions for writing objects.
+- Scalar / Primitive / Atomic value - the value of the primitive data type.
+The scalar is copied on assignment and passed to the function by value.
+- Reference points to a value of a reference type, i.e. not a scalar value, for JavaScript these are subtypes of `Object, Function, Array`.
+  - [reference types](https://github.com/HowProgrammingWorks/DataTypes)
+  - [code examples on arrays and objects](https://github.com/HowProgrammingWorks/DataStructures)
+- Identifier - names of variables, constants, functions, methods,
+arguments, classes, both internal and imported from other modules and global.
+- [Variable](https://github.com/HowProgrammingWorks/DataTypes) -
+a named memory area (identifier) that has a data type, address, and value. We can change the value of a variable, as opposed to a constant (and for some languages, the type): `let cityName = 'Beijing';`
+- Assignment - binding a value and an identifier (for example, a variable). The assignment operator in many languages returns the assigned value (has the behavior of an expression).
+- [Constant](https://github.com/HowProgrammingWorks/DataTypes) -
+the identifier with which the immutable value is associated and the type:
 `const WATCH_TIMEOUT = 5000;`
-- [Структурные типы / Composed types](https://github.com/HowProgrammingWorks/DataTypes) -
-композитные типы или структуры состоят из нескольких скалярных значений,
-объединенных в одно таким образом, чтоб над этим объединенным значением можно
-выполнять набор операций, например: объект, массив, множество, кортеж.
-- [Перечислимые типы / Enumerated types](https://github.com/HowProgrammingWorks/Enum)
-- Флаг / Flag - Логическое значение, определяющее состояние чего-либо, например,
-признак закрытия соединения, признак завершения поиска по структуре данных и т.д.
-Например: `let flagName = false;` Иногда флагами могут называть не логические, а
-перечислимые типы.
-- Алгоритм / Algorithm - это формальное описание порядка вычислений для
-определенного класса задач за конечное время (способность завершаться для любого
-множества входных данных).
-- Программа / Program - программный код и данные, объединенные в одно целое для
-вычисления и управления ЭВМ.
-- Инженерия / Engineering - извлечение практической пользы из имеющихся ресурсов
-при помощи науки, техники, различных методик, организационной структуры, а так
-же приемов и знаний.
-- Инженерия программного обеспечения / Software engineering - приложение
-инженерии к индустрии программного обеспечения. Включает архитектуру,
-исследование, разработку, тестирование, развертывание и поддержку ПО.
-- Программирование / Programming - это искусство и инженерия решения задач при
-помощи вычислительной техники.
-- Кодирование / Coding - написание исходного кода программы при помощи
-определенного синтаксиса (языка), стиля и парадигмы по готовому ТЗ.
-- Разработка программного обеспечения / Software development - это соединение
-программирования и кодирования на всех этапов жизненного цикла ПО:
-проектирования, разработки, тестирования, отладки, поддержки, сопровождения и
-модификации.
-- Инструкция / Instruction - один шаг алгоритма вычислений, например инструкция
-процессора исполняется CPU.
-- Оператор / Statement - наименьшая синтаксическая часть языка программирования,
-исполняемая интерпретатором, средой или компилируемая в машинный код.
-- Команда / Command - атомарная задача для командного процессора.
-- Выражение / Expression - синтаксическая конструкция языка программирования
-предназначенная для выполнения вычислений. Выражение состоит из идентификаторов,
-значений, операторов и вызова функций. Пример: `(len - 1) * f(x, INTERVAL)`
-- Блок кода / Block - логически связанная группа инструкций или операторов.
-Блоки создают область видимости. Блоки могут быть вложенными. Примеры: `{}`,
-`(+ a b)`, `begin end`, отступы в Python.
-- Процедура или подпрограмма / Procedure or Subroutine - логически связанная
-группа инструкций или операторов, имеющая имя. Процедура способствует повторному
-использованию кода и может быть вызвана из разных частей программы, много раз
-и с разными аргументами. Процедура не возвращает значений, в отличие от функций,
-но в некоторых языках (но не в JavaScript) может модифицировать свои аргументы.
-Во многих языках процедура описывается при помощи синтаксиса функций (например,
-типа void).
-- Функция / Function - абстракция преобразования значений. Функция однозначно
-отображает одно множество значений в другое множество значений. Функция может
-быть задана блоком операторов или выражением. Функция имеет набор аргументов.
-Функция может быть вызвана по имени или через указатель. Функция способствует
-повторному использованию кода и может быть вызвана из разных частей программы,
-много раз и с разными аргументами. В JavaScript функция описывается при помощи
-function или синтаксиса стрелок (лямбда-функций).
-- Сигнатура функции / Function signature - имя (идентификатор), количество
-аргументов и их типы (а иногда и имена аргументов), тип результата.
-- [Метод / Method](https://github.com/HowProgrammingWorks/Function)
-  - функция или процедура, связанная с объектным контекстом или программным интерфейсом;
+- [Composed types](https://github.com/HowProgrammingWorks/DataTypes) -
+composite types or structures consist of several scalar values combined into one in such a way that a set of operations can be performed on this combined value, for example: object, array, set, tuple.
+- [Enumerated types](https://github.com/HowProgrammingWorks/Enum)
+- Flag - A boolean value that defines the state of something, for example, a sign that a connection is closed, a sign that a search has been completed by a data structure, etc. For example: 
+`let flagName = false;` Sometimes flags can be called not logical, but enumerated types.
+- Algorithm - this is a formal description of the order of computations for a certain class of problems in a finite time.
+- Program - code and data combined to control the machine and perform computation.
+- Engineering - extracting practical benefits from available resources with the help of science, technology, various methods, organizational structure, as well as techniques and knowledge.
+- Software engineering - application of engineering to the software industry. Includes architecture, research, development, testing, deployment and support of software.
+- Programming - it is the art and engineering of solving problems with the help of computers.
+- Coding - writing the source code of the program using a specific syntax (language), style and paradigm according to the SRS (Software requirements specification).
+- Software development - is a combination of programming and coding at all stages of the software life cycle: design, development, testing, debugging, support, maintenance and
+modifications.
+- Instruction - one step of a calculation algorithm, for example, a processor instruction is executed by the CPU.
+- Statement - the smallest syntactic part of a programming language that is executed by an interpreter, runtime, or compiled into machine code.
+- Command - atomic task for the shell.
+- Expression - a syntax construct of a programming language designed to perform calculations. An expression consists of identifiers, values, operators, and function calls. Example:
+`(len - 1) * f(x, INTERVAL)`
+- Code block - a logically related group of instructions or statements.
+Blocks create a scope. Blocks can be nested. Examples: `{}`,
+`(+ a b)`, `begin end`, indentation in python.
+- Procedure or Subroutine - a logically related group of instructions or statements that has a name. The procedure promotes code reuse and can be called from different parts of the program, many times and with different arguments. A procedure does not return a value, unlike a function, but in some languages (but not in JavaScript) it can modify its arguments. In many languages, a procedure is described using function syntax (for example, the void type).
+- Function - value transformation abstraction. A function uniquely maps one set of values to another set of values. A function can be defined by a block of statements or by an expression. A function has a set of arguments. A function can be called by name or through a pointer. A function promotes code reuse and can be called from different parts of the program many times and with different arguments. In JavaScript, a function is described using function keyword or arrow syntax (lambda functions).
+- Function signature - name (identifier), number of arguments and their types (and sometimes the names of arguments), result type.
+- [Method](https://github.com/HowProgrammingWorks/Function)
+  - a function or procedure associated with an object context or programming interface;
   - `{ a: 10, b: 10, sum() { return this.a + this.b; } }`
-- [Цикл / Loop](https://github.com/HowProgrammingWorks/Iteration)
-  - многократное исполнение блока операторов
-- [Условие / Conditional statements](https://github.com/HowProgrammingWorks/Conditional)
-  - синтаксическая конструкция, позволяющая выполнить разные действия или
-  возвращающая разные значения (тернарный оператор) в зависимости от логического
-  выражения (возвращающего true или false)
-- [Рекурсия / Recursion](https://github.com/HowProgrammingWorks/Recursion) -
-задание алгоритма вычисления функции через вызов ее самой (прямой или непрямой)
-или определение функции, через нее саму.
-  - Косвенная (непрямая) рекурсия - когда функция определена или вызывает себя
-  не напрямую, а через другую или цепочку функций;
-  - Хвостовая - частный случай, когда рекурсивный вызов является последней
-  операцией перед возвратом значения, что всегда может быть преобразовано
-  в цикл, даже автоматическим способом. Не хвостовая тоже может быть
-  преобразована в цикл и оптимизирована, но более сложным способом, обычно
-  вручную.
-- [Строка / String](https://github.com/HowProgrammingWorks/String)
-  - последовательность символов (в большинстве языков к каждому символу можно
-  обратиться через синтаксис доступа к элементам массива, например, квадратные
-  скобки).
+- [Loop](https://github.com/HowProgrammingWorks/Iteration)
+  - multiple execution of a block of statements
+- [Conditional statements](https://github.com/HowProgrammingWorks/Conditional)
+  - a syntax construct that allows you to perform different actions or return different values (ternary operator) depending on a logical expression (returning true or false)
+- [Recursion](https://github.com/HowProgrammingWorks/Recursion) -
+setting an algorithm for calculating a function by calling it itself (directly or indirectly) or defining a function through itself.
+  - Indirect recursion - when a function is defined or calls itself not directly, but through another or a chain of functions;
+  - Tailed recursion is a special case where the recursive call is the last operation before returning a value, which can always be turned into a loop, even automatically. The non-tail can also be converted into a loop and optimized, but in a more complex way, usually manually.
+- [String](https://github.com/HowProgrammingWorks/String)
+  - a sequence of characters (in most languages, each character can be accessed via array access syntax, such as square brackets).
 - [Коллекция / Collection](https://github.com/HowProgrammingWorks/Collections) -
 структура данных, служащая для хранения набора значений и предоставляющая доступ
 к ним по индексам или ключам.
@@ -160,27 +103,16 @@ function или синтаксиса стрелок (лямбда-функций
 - АЛУ / ALU - блок ЦП, выполняющий арифметические и логические преобразования
 над машинными словами, представляющими целые числа, числа с плавающей точкой,
 адресами памяти, строками, логическими величинами.
-- Компонент / Component - несколько программных объектов (например: функций,
-классов, монад, типов) объединенных и организованных по общему признаку.
-- Модуль / Module - целостный, функционально полный, независимый компонент
-программной системы имеющий имя, интерфейс, реализацию.
-- [Модульность / Modularity](https://github.com/HowProgrammingWorks/Modularity)
-  - модульность повышает переиспользование кода, упрощает интеграцию компонентов,
-  улучшает компоновку и тестирование программ по частям;
-  - ограничения: модули не должны использовать глобальные переменные или
-  модифицировать базовые классы/прототипы/функции языка программирования,
-  платформы и/или фреймворка; модули должны быть слабо связаны, а
-  взаимодействовать друг с другом должны через внешнее API (предпочтительно)
-  или шину событий (если система построена на событийной модели, подписке).
-- Библиотека / Library - сборник программных объектов (например: функций,
-классов, монад, типов) подготовленный для повторного использования (часто
-опубликованный). Библиотека это более крупная логическая часть кода, чем
-компонент. Иногда библиотеку используют как синоним модуля, а иногда библиотека
-состоит из нескольких модулей.
-- Сложность / Complexity
-  - Вычислительная сложность / Computational complexity
-  - Колмогоровская (описательная) сложность / Kolmogorov (descriptive) complexity
-  - Если нет циклов, то описательная коррелирует с вычислительной
+- Component - several program objects (for example: functions, classes, monads, types) united and organized according to a common feature.
+- Module - integral, functionally complete, independent component of a software system having a name, interface, implementation.
+- [Modularity](https://github.com/HowProgrammingWorks/Modularity)
+  - modularity increases code reuse, simplifies component integration, improves linking and testing of programs in parts;
+  - restrictions: modules should not use global variables or modify base classes/prototypes/functions of the programming language, platform and/or framework; modules should be loosely coupled, and they should interact with each other through an external API (preferably) or an event bus (if the system is built on an event model, subscription).
+- Library - collection of program objects (eg: functions, classes, monads, types) prepared for reuse (published frequently). A library is a larger logical piece of code than a component. Sometimes a library is used as a synonym for a module, and sometimes a library consists of several modules.
+- Complexity
+  - Computational complexity
+  - Kolmogorov (descriptive) complexity
+  - If there are no cycles, then descriptive correlates with computational
 
 ## Основные понятия
 

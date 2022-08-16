@@ -452,7 +452,7 @@ a data structure that stores a set of values and provides access to them by inde
 - [Metadata](https://github.com/HowProgrammingWorks/Metaprogramming)
 - [Protocol](https://github.com/metarhia/metacom)
 - [Live Code Reload](https://github.com/HowProgrammingWorks/LiveReload)
-- Http Request (HTTP, XMLHttpRequest, fetch): [примеры](https://github.com/HowProgrammingWorks/HttpRequest)
+- Http Request (HTTP, XMLHttpRequest, fetch): [examples](https://github.com/HowProgrammingWorks/HttpRequest)
 - [Non-blocking iteration](https://github.com/HowProgrammingWorks/NonBlocking)
 - [Lenses, functional analogs of getters & setters](https://github.com/HowProgrammingWorks/Lenses)
 

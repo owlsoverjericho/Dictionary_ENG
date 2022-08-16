@@ -3,7 +3,6 @@
 Attention! Links to videos on each topic are placed in the appropriate repos.
 (vids are in rus btw)
 
-/// TODO: redo links
 Table of contents:
 - [Essential concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Essential-concepts)
 - [Basic concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Basic-concepts)
@@ -459,26 +458,26 @@ a data structure that stores a set of values and provides access to them by inde
 
 ## Asynchronous programming
 
-- Асинхронное программирование / Asynchronous Programming
-- Неблокирующая операция / Non-blocking I/O
-- Асинхронное итерирование / Asynchronous Iterable
-- Асинхронный коллектор данных / Asynchronous data collector
-- Промис / Promise
-- Генератор / Generator Function
-- Асинхронный генератор / Asynchronous Generator Function
-- Итератор / Iterator
-- Асинхронный итератор / Asynchronous Iterator
-- Итерируемый объект / Iterable
-- Асинхронная композиция функций / Asynchronous Function Composition
+- Asynchronous Programming
+- Non-blocking I/O
+- Asynchronous Iterable
+- Asynchronous data collector
+- Promise
+- Generator Function
+- Asynchronous Generator Function
+- Iterator
+- Asynchronous Iterator
+- Iterable
+- Asynchronous Function Composition
 - Thenable
 - async/await
-- Асинхронная очередь / Asynchronous Queue
-- Открытый конструктор / Revealing Constructor
-- Фьючер / Future
-- Дифер / Deferred
-- Модель акторов / Actor Model
-- Наблюдатель / Observer
-- Поток событий / Event stream
+- Asynchronous Queue
+- Revealing Constructor
+- Future
+- Deferred
+- Actor Model
+- Observer
+- Event stream
 
 ## Parallel programming
 
@@ -495,30 +494,30 @@ a data structure that stores a set of values and provides access to them by inde
 - Ресурсный голод / Resource starvation - состояние в программной системе (обычно
 многопоточной), когда она постоянно запрашивает доступ к ресурсам (обычно
 разделяемым), и не может их получить.
-- Критическая секция / Critical section - участок исполняемого кода, в котором
+- Critical section - участок исполняемого кода, в котором
 производится эксклюзивный доступ к разделяемому ресурсу.
-- [Потоки / Threads](https://github.com/HowProgrammingWorks/Threads)
+- [Threads](https://github.com/HowProgrammingWorks/Threads)
   - SharedArrayBuffer
-  - worker_threads в Node.js
-- [Атомарные операции / Atomics](https://github.com/HowProgrammingWorks/Atomics)
-- [Семафор / Semaphore](https://github.com/HowProgrammingWorks/Semaphore)
-- [Мьютекс / Mutex](https://github.com/HowProgrammingWorks/Mutex)
+  - worker_threads in Node.js
+- [Atomics](https://github.com/HowProgrammingWorks/Atomics)
+- [Semaphore](https://github.com/HowProgrammingWorks/Semaphore)
+- [Mutex](https://github.com/HowProgrammingWorks/Mutex)
 
 ## Programming paradigms
 
-- [Императивное программирование / Imperative Programming](https://github.com/HowProgrammingWorks/ImperativeProgramming)
-  - Неструктурное программирование / Non-structured
-  - Структурное программирование / Structured Programming
-  - Процедурное программирование / Procedural Programming
+- [Imperative Programming](https://github.com/HowProgrammingWorks/ImperativeProgramming)
+  - Non-structured
+  - Structured Programming
+  - Procedural Programming
   - [Object-oriented programming](https://github.com/HowProgrammingWorks/ObjectOrientedProgramming)
   - [Prototype-oriented programming](https://github.com/HowProgrammingWorks/PrototypeOrientedProgramming)
-- [Функциональное программирование / Functional Programming](https://github.com/HowProgrammingWorks/FunctionalProgramming)
-  - [примеры разных стилей функционального кода](https://github.com/HowProgrammingWorks/Abstractions)
-- Логическое программирование / Logical Programming
-- Декларативное программирование / Declarative Programming
-- [Программирование управляемое данными / Data-driven Programming](https://github.com/HowProgrammingWorks/DataDrivenProgramming)
-- Техники программирования
-  - [Асинхронное программирование / Asynchronous Programming](https://github.com/HowProgrammingWorks/AsynchronousProgramming)
-  - Реактивное программирование / Reactive Programming
-- [Событийное программирование / Event-driven Programming](https://github.com/HowProgrammingWorks/EventDrivenProgramming)
-- [Метапрограммирование / Metaprogramming](https://github.com/HowProgrammingWorks/Metaprogramming)
+- [Functional Programming](https://github.com/HowProgrammingWorks/FunctionalProgramming)
+  - [examples of different styles of functional code](https://github.com/HowProgrammingWorks/Abstractions)
+- Logical Programming
+- Declarative Programming
+- [Data-driven Programming](https://github.com/HowProgrammingWorks/DataDrivenProgramming)
+- Programming techniques
+  - [Asynchronous Programming](https://github.com/HowProgrammingWorks/AsynchronousProgramming)
+  - Reactive Programming
+- [Event-driven Programming](https://github.com/HowProgrammingWorks/EventDrivenProgramming)
+- [Metaprogramming](https://github.com/HowProgrammingWorks/Metaprogramming)

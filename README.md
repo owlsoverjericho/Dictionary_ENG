@@ -6,13 +6,13 @@ Attention! Links to videos on each topic are placed in the appropriate repos.
 /// TODO: redo links
 Table of contents:
 - [Essential concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Essential-concepts)
-- [Basic concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Основные-понятия)
-- [Additional topics](https://github.com/owlsoverjericho/Dictionary_ENG#Вспомогательные-материалы)
-- [Data structures](https://github.com/owlsoverjericho/Dictionary_ENG#Структуры-данных)
-- [Extended concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Расширенные-понятия)
-- [Parallel programming](https://github.com/owlsoverjericho/Dictionary_ENG#Параллельное-программирование)
-- [Asynchronous programming](https://github.com/owlsoverjericho/Dictionary_ENG#Асинхронное-программирование)
-- [Programming paradigms](https://github.com/owlsoverjericho/Dictionary_ENG#Парадигмы-программирования)
+- [Basic concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Basic-concepts)
+- [Additional topics](https://github.com/owlsoverjericho/Dictionary_ENG#Additional-topics)
+- [Data structures](https://github.com/owlsoverjericho/Dictionary_ENG#Data-structures)
+- [Extended concepts](https://github.com/owlsoverjericho/Dictionary_ENG#Extended-concepts)
+- [Parallel programming](https://github.com/owlsoverjericho/Dictionary_ENG#Parallel-programming)
+- [Asynchronous programming](https://github.com/owlsoverjericho/Dictionary_ENG#Asynchronous-programming)
+- [Programming paradigms](https://github.com/owlsoverjericho/Dictionary_ENG#Programming-paradigms)
 
 ## Essential concepts
 
@@ -107,7 +107,7 @@ a data structure that stores a set of values and provides access to them by inde
   - Kolmogorov (descriptive) complexity
   - If there are no cycles, then descriptive correlates with computational
 
-## Основные понятия
+## Basic concepts
 
 - [Объект или Экземпляр / Object or Instance](https://github.com/HowProgrammingWorks/DataTypes) -
 структура данных, содержащая состояние и методы, связанные с этим состоянием.
@@ -367,7 +367,7 @@ a data structure that stores a set of values and provides access to them by inde
 функции (с замыканием) или другого инстанса (методы которого тоже имеют
 доступ к скрываемым инстансам через замыкание).
 
-## Вспомогательные материалы
+## Additional-topics
 
 - [Линтер / Linter](https://github.com/HowProgrammingWorks/Tools) - статический
 анализатор кода (без запуска), который может определить и предложить
@@ -378,7 +378,7 @@ a data structure that stores a set of values and provides access to them by inde
 - Непрерывная интеграция
 - Тестирование
 
-## Структуры данных
+## Data structures
 
 - [Запись или структура / Struct or Record](https://github.com/HowProgrammingWorks/DataStructures)
 - [Массив / Array](https://github.com/HowProgrammingWorks/DataStructures)
@@ -414,7 +414,7 @@ a data structure that stores a set of values and provides access to them by inde
 - [Ключ-значение, Хешмап / Map, Key-value](https://github.com/HowProgrammingWorks/KeyValue)
   - [класс `Map`](https://github.com/HowProgrammingWorks/Map)
 
-## Расширенные понятия
+## Extended concepts
 
 - [Сборка мусора / Garbage Collection](https://github.com/HowProgrammingWorks/GarbageCollection)
 - [Прокси / Proxy](https://github.com/HowProgrammingWorks/Proxy)
@@ -457,7 +457,7 @@ a data structure that stores a set of values and provides access to them by inde
 - [Неблокирующие итерации](https://github.com/HowProgrammingWorks/NonBlocking)
 - [Линзы - функциональные аналоги геттера и сеттера](https://github.com/HowProgrammingWorks/Lenses)
 
-## Асинхронное программирование
+## Asynchronous programming
 
 - Асинхронное программирование / Asynchronous Programming
 - Неблокирующая операция / Non-blocking I/O
@@ -480,7 +480,7 @@ a data structure that stores a set of values and provides access to them by inde
 - Наблюдатель / Observer
 - Поток событий / Event stream
 
-## Параллельное программирование
+## Parallel programming
 
 - Состояние гонки / Race Condition - состояние в многопоточной или конкурентной
 программной системе, когда несколько потоков исполнения конкурируя за общий
@@ -504,7 +504,7 @@ a data structure that stores a set of values and provides access to them by inde
 - [Семафор / Semaphore](https://github.com/HowProgrammingWorks/Semaphore)
 - [Мьютекс / Mutex](https://github.com/HowProgrammingWorks/Mutex)
 
-## Парадигмы программирования
+## Programming paradigms
 
 - [Императивное программирование / Imperative Programming](https://github.com/HowProgrammingWorks/ImperativeProgramming)
   - Неструктурное программирование / Non-structured

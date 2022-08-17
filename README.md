@@ -383,33 +383,27 @@ a data structure that stores a set of values and provides access to them by inde
 - [Array](https://github.com/HowProgrammingWorks/DataStructures)
 - [Buffer](https://github.com/HowProgrammingWorks/Buffers)
 - [List](https://github.com/HowProgrammingWorks/LinkedList)
-  - Односвязный, двусвязный, кольцевой, развернутый список (список массивов)
-  - Реализация на объектах, массивах и замыканиях
-  - Реализация на синтаксисе прототипов, классов и фабрик
-  - Реализация на замыканиях и функциональных объектах
-  - Реализация на одной и двух категориях (только узел или список и узел)
+  - Singly linked, doubly linked, looped, flatenned list (list of arrays)
+  - Implementation on objects, arrays and clojures
+  - Implementation on syntax of prototypes, classes nad factories
+  - Implementation on clojures and functional objects
+  - Implementation in one or two categories (just node or a list and a nodes)
 - [Stack, Queue, Dequeue](https://github.com/HowProgrammingWorks/Dequeue)
-  - Stack - список, работающий по принципу LIFO;
-  - Queue - список, работающий по принципу FIFO;
-  - Dequeue - двухсторонний список, работающий, как стек и очередь;
-- [Дерево](https://github.com/HowProgrammingWorks/Trees)
-- [Двоичное дерево](https://github.com/HowProgrammingWorks/Trees), поисковое
-дерево, красно-черное дерево.
-- Heap - древовидная структура данных или область памяти для динамического
-распределения под хранение данных.
+  - Stack - a list, working on LIFO principle;
+  - Queue - a list, working on FIFO principle;
+  - Dequeue - doubly linked list, working like a stack and a queue;
+- [Tree](https://github.com/HowProgrammingWorks/Trees)
+- [Binary tree](https://github.com/HowProgrammingWorks/Trees), search tree, red-black tree.
+- Heap - tree-like data structure or memory region for dynamic allocation of space for storing data.
 - [Graph](https://github.com/HowProgrammingWorks/Graph)
 - [Buffer](https://github.com/HowProgrammingWorks/Buffers) -
-область памяти для хранения данных (обычно для операций ввода/вывода).
-- Типизированные массивы
+memory region for data storage (often for I/O operations).
+- Typed arrays
 - [Collection](https://github.com/HowProgrammingWorks/Collections) -
-структура данных, служащая для хранения набора значений и предоставляющая
-доступ к ним по индексам или ключам.
+a data structure, serving as a storage of data and allowing access to them by keys or indexes.
 - [Set](https://github.com/HowProgrammingWorks/Set)
-  - структура данных, реализующая математическое "множество";
-  - структура данных, служащая для хранения однородного набора значений, которые
-  не имеют индексов или ключей (но внутри структуры данных они должны иметь
-  порядок, например, индекс в массиве, однако, множество абстрагирует нас от
-  этой особенности реализации).
+  - a data structure, that implements mathematical "Set";
+  - a data structure, serving as a data storage for cohesive (same type) values, that don't have indexes/keys (but they must have an internal order inside of the data structure itself e.g. index in an array, nonetheless, a Set abstracts us from details of this implementation).
 - [Map, Key-value](https://github.com/HowProgrammingWorks/KeyValue)
   - [`Map` class](https://github.com/HowProgrammingWorks/Map)
 
@@ -481,21 +475,11 @@ a data structure that stores a set of values and provides access to them by inde
 
 ## Parallel programming
 
-- Состояние гонки / Race Condition - состояние в многопоточной или конкурентной
-программной системе, когда несколько потоков исполнения конкурируя за общий
-ресурс портят данные, приводят к непредусмотренному порядку исполнения,
-зацикливаются, и т.д., что приводит к утечке ресурсов, непредсказуемому и
-неправильному поведению, уязвимостям, нестабильности работы.
-- Взаимная блокировка / Deadlock - состояние в многопроцессовой (распределенной)
-системе, когда несколько процессов захватили ресурсы, необходимые для дальнейшей
-работы друг друга, заблокировав, тем самым дальнейшую работу.
-- Livelock - зацикленная блокировка, бесконечно изменяющая состояние, но не
-выполняющая полезной работы.
-- Ресурсный голод / Resource starvation - состояние в программной системе (обычно
-многопоточной), когда она постоянно запрашивает доступ к ресурсам (обычно
-разделяемым), и не может их получить.
-- Critical section - участок исполняемого кода, в котором
-производится эксклюзивный доступ к разделяемому ресурсу.
+- Race Condition - a state in a multythreaded or concurrent system, where a few execution threads competing with each other for the common resourses spoil/damage data, leading to an unpredictable order of execution, cycling, and so on., that results in resourse leakage, unpredictable and incorrect behaviour, vulnerabilities, unstability of work.
+- Deadlock - a state in a multyprocess (distributed) system, where a few processes capture the resources, needed for continuous execution of each other, in order blocking all code execution.
+- Livelock - loop cock, a constantly changing state that doesn't do any useful work.
+- Resource starvation - a state in a programmed system (often multithreaded), where it is constantly requesting access to resourses (often shared), and can't get them.
+- Critical section - a piece of executed code, which has a exclusive access to shared resources.
 - [Threads](https://github.com/HowProgrammingWorks/Threads)
   - SharedArrayBuffer
   - worker_threads in Node.js

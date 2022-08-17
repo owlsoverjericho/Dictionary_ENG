@@ -368,10 +368,7 @@ a data structure that stores a set of values and provides access to them by inde
 
 ## Additional-topics
 
-- [Linter](https://github.com/HowProgrammingWorks/Tools) - статический
-анализатор кода (без запуска), который может определить и предложить
-стилистические, грамматические или оптимизационное улучшение или просто выявить
-проблему (а иногда и исправить ее автоматически).
+- [Linter](https://github.com/HowProgrammingWorks/Tools) - is a static code analysis tool used to flag programming errors, bugs, stylistic errors and suspicious constructs.
 - Version control system
 - Package manager
 - Continuous integration
